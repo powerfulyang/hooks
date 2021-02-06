@@ -1,0 +1,52 @@
+{
+  "name": "@powerfulyang/hooks",
+  "version": "0.2.15",
+  "description": "util hooks",
+  "keywords": [
+    "react-hooks"
+  ],
+  "author": "powerfulyang <i@powerfulyang.com>",
+  "homepage": "https://github.com/powerfulyang/tools",
+  "license": "MIT",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerfulyang/tools.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && run-s build:*",
+    "build:init": "node ./init.js",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "watch:build": "tsc -p tsconfig.module.json --watch",
+    "prettier": "prettier \"src/**/*.ts\" --write",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --format=pretty ./src"
+  },
+  "bugs": {
+    "url": "https://github.com/powerfulyang/tools/issues"
+  },
+  "devDependencies": {
+    "@powerfulyang/lint": "^0.2.12",
+    "@testing-library/react-hooks": "^5.0.3",
+    "@types/keyboardjs": "^2.5.0",
+    "isomorphic-fetch": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-test-renderer": "^17.0.1"
+  },
+  "dependencies": {
+    "@powerfulyang/utils": "^0.7.14",
+    "immer": "^8.0.1",
+    "keyboardjs": "^2.6.4",
+    "qs": "^6.9.6",
+    "rxjs": "^6.6.3"
+  }
+}
