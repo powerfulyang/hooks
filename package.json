@@ -35,18 +35,18 @@
   },
   "devDependencies": {
     "@powerfulyang/lint": "^0.2.12",
-    "@testing-library/react-hooks": "^5.1.0",
+    "@testing-library/react-hooks": "^5.1.1",
     "@types/keyboardjs": "^2.5.0",
     "isomorphic-fetch": "^3.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-test-renderer": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2"
   },
   "dependencies": {
     "@powerfulyang/utils": "^0.7.14",
-    "immer": "^8.0.1",
+    "immer": "^9.0.1",
     "keyboardjs": "^2.6.4",
-    "qs": "^6.9.6",
-    "rxjs": "^6.6.6"
+    "qs": "^6.10.1",
+    "rxjs": "^6.6.7"
   }
 }
