@@ -1,5 +1,5 @@
 import { useRef } from 'react';
 
-export function useRendersCount(): number {
+export function useRenderCount(): number {
   return ++useRef(0).current;
 }

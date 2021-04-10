@@ -1,6 +1,7 @@
 import { produce, enableAllPlugins } from 'immer';
 import { useCallback, useState } from 'react';
-import { ReturnTypedFunction, VoidFunction, isFunction } from '@powerfulyang/utils';
+import type { ReturnTypedFunction, VoidFunction} from '@powerfulyang/utils';
+import { isFunction } from '@powerfulyang/utils';
 
 enableAllPlugins();
 
@@ -13,7 +14,7 @@ export function useImmer<T = any>(initialValue?: T | ReturnTypedFunction<T>) {
       if (!isFunction(updater)) {
         return updateValue(<T>updater);
       }
-      return updateValue(produce(<any>updater));
+      return updateValue(produce<T>(<any>updater));
       // updateValue(produce(newState))
       // OR
       // example updater = (state)=> state.property = newVal

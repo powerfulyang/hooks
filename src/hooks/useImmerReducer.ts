@@ -1,5 +1,7 @@
-import produce, { Draft } from 'immer';
-import { Dispatch, useMemo, useReducer } from 'react';
+import type { Draft } from 'immer';
+import produce from 'immer';
+import type { Dispatch} from 'react';
+import { useMemo, useReducer } from 'react';
 
 export type Reducer<S = any, A = any> = (draftState: Draft<S>, action: A) => void | S;
 
