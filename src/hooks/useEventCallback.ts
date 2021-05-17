@@ -1,8 +1,8 @@
-import { useEffect, useState, useCallback } from 'react';
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { useEffect, useState } from 'react';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
-import { RestrictArray, VoidAsNull, Not } from '../type';
-import { useFixedCall } from './useFixed';
+import { Not, RestrictArray, VoidAsNull } from '../type';
+import { useFixed, useFixedCall } from './useFixed';
 import { useEffectOnce } from './useEffectOnce';
 
 export type VoidableEventCallback<EventValue> = EventValue extends void
@@ -66,11 +66,14 @@ export function useEventCallback<EventValue, State = void, Inputs = void>(
   function eventCallback(e: EventValue) {
     return event$.next(e);
   }
-  const returnedCallback = useCallback(eventCallback, [event$]);
+  const returnedCallback = useFixed(eventCallback);
 
   useEffect(() => {
-    inputs$.next(inputs!);
-  }, [inputs, inputs$]);
+    if (inputs !== undefined) {
+      inputs$.next(inputs);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, inputs);
 
   useEffectOnce(() => {
     setState(initialValue);

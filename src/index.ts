@@ -1,5 +1,6 @@
 export * from './hooks/useBeforeUnload';
 export * from './hooks/useEffectOnce';
+export * from './hooks/useEventCallback';
 export * from './hooks/useFavicon';
 export * from './hooks/useFixed';
 export * from './hooks/useGeolocation';
@@ -12,6 +13,7 @@ export * from './hooks/useKeyboardJs';
 export * from './hooks/useMeasure';
 export * from './hooks/useMount';
 export * from './hooks/useMountedState';
+export * from './hooks/useObservable';
 export * from './hooks/usePageLeave';
 export * from './hooks/usePageQuery';
 export * from './hooks/usePortal';
