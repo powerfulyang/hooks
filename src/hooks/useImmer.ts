@@ -1,6 +1,7 @@
 import { produce, enableAllPlugins } from 'immer';
 import { useCallback, useState } from 'react';
-import { ReturnTypedFunction, VoidFunction, isFunction } from '@powerfulyang/utils';
+import type { ReturnTypedFunction, VoidFunction} from '@powerfulyang/utils';
+import { isFunction } from '@powerfulyang/utils';
 
 enableAllPlugins();
 
