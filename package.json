@@ -29,17 +29,27 @@
     "build:module": "tsc -p tsconfig.module.json",
     "watch:build": "tsc -p tsconfig.module.json --watch",
     "prettier": "prettier \"src/**/*.ts\" --write",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --format=pretty ./src --fix"
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/powerfulyang/tools/issues"
   },
   "devDependencies": {
-    "@powerfulyang/lint": "^0.5.0",
+    "@babel/core": "^7.16.0",
+    "@powerfulyang/lint": "^0.7.2",
+    "@storybook/addon-actions": "^6.4.4",
+    "@storybook/addon-essentials": "^6.4.4",
+    "@storybook/addon-links": "^6.4.4",
+    "@storybook/react": "^6.4.4",
     "@testing-library/react-hooks": "^7.0.2",
-    "@types/keyboardjs": "^2.5.0",
+    "babel-loader": "^8.2.3",
     "npm-run-all": "^4.1.5",
-    "react-test-renderer": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "typescript": "^4.5.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -47,7 +57,7 @@
   },
   "dependencies": {
     "@powerfulyang/utils": "^1.2.0",
-    "immer": "^9.0.6",
+    "immer": "^9.0.7",
     "rxjs": "^7.4.0"
   }
 }

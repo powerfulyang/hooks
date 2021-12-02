@@ -1,17 +1,12 @@
 import { useCallback, useEffect } from 'react';
+import { isFunction } from '@powerfulyang/utils';
 
 export const useBeforeUnload = (enabled: boolean | (() => boolean) = true, message?: string) => {
   const handler = useCallback(
     (event: BeforeUnloadEvent) => {
-      const finalEnabled = typeof enabled === 'function' ? enabled() : true;
+      const finalEnabled = isFunction(enabled) ? enabled() : enabled;
 
-      if (!finalEnabled) {
-        return;
-      }
-
-      event.preventDefault();
-
-      if (message) {
+      if (finalEnabled) {
         // eslint-disable-next-line no-param-reassign
         event.returnValue = message;
       }
@@ -20,14 +15,13 @@ export const useBeforeUnload = (enabled: boolean | (() => boolean) = true, messa
   );
 
   useEffect(() => {
-    if (!enabled) {
-      return undefined;
+    if (enabled) {
+      window.addEventListener('beforeunload', handler);
+
+      return () => {
+        window.removeEventListener('beforeunload', handler);
+      };
     }
-
-    window.addEventListener('beforeunload', handler);
-
-    return () => {
-      window.removeEventListener('beforeunload', handler);
-    };
+    return () => {};
   }, [enabled, handler]);
 };

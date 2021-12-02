@@ -1,20 +1,24 @@
-import { produce, enableAllPlugins } from 'immer';
+import { enableAllPlugins, produce } from 'immer';
 import { useCallback, useState } from 'react';
-import type { ReturnTypedFunction, VoidFunction} from '@powerfulyang/utils';
+import type { ReturnTypedFunction, VoidFunction } from '@powerfulyang/utils';
 import { isFunction } from '@powerfulyang/utils';
 
 enableAllPlugins();
 
 export function useImmer<T = any>(initialValue?: T | ReturnTypedFunction<T>) {
-  const [val, updateValue] = useState<T | undefined>(initialValue);
+  const [val, updateValue] = useState(initialValue);
 
   return [
-    val as T,
-    useCallback((updater: T | VoidFunction<T>) => {
-      if (!isFunction(updater)) {
-        return updateValue(<T>updater);
+    val,
+    useCallback((updater: T | VoidFunction<T> | ReturnTypedFunction<T>) => {
+      if (isFunction(updater)) {
+        const returnValue = updater();
+        if (!returnValue) {
+          return updateValue((v) => produce(v, updater));
+        }
+        return updateValue(returnValue);
       }
-      return updateValue(produce<T>(<any>updater));
+      return updateValue(updater);
       // updateValue(produce(newState))
       // OR
       // example updater = (state)=> state.property = newVal
