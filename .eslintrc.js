@@ -1,6 +1,9 @@
+const { eslint } = require('@powerfulyang/lint');
+
 module.exports = {
-  extends: [require.resolve('@powerfulyang/lint/dist/eslint')],
+  ...eslint,
   rules: {
-    'import/no-extraneous-dependencies': 0,
+    ...eslint.rules,
+    'import/no-extraneous-dependencies': 'off',
   },
 };

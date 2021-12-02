@@ -1,17 +1,36 @@
 import type { Draft } from 'immer';
 import produce from 'immer';
-import type { Dispatch} from 'react';
+import type { Dispatch } from 'react';
 import { useMemo, useReducer } from 'react';
 
+/**
+ * @description Hook for creating a reducer with immer.
+ */
 export type Reducer<S = any, A = any> = (draftState: Draft<S>, action: A) => void | S;
 
+/**
+ * @description A hook that allows you to use Immer.js with a reducer.
+ * @param reducer
+ * @param initialState
+ * @param initialAction
+ */
 export function useImmerReducer<S = any, A = any>(
   reducer: Reducer<S, A>,
   initialState: S,
-  initialAction?: (initial: any) => S,
+  initialAction?: (initial: S) => S,
 ): [S, Dispatch<A>];
 
-export function useImmerReducer(reducer: any, initialState: any, initialAction: (arg: any) => any) {
+/**
+ * @description Hook for creating a reducer with immer.
+ * @param reducer
+ * @param initialState
+ * @param initialAction
+ */
+export function useImmerReducer<S, A>(
+  reducer: Reducer<S, A>,
+  initialState: S,
+  initialAction: (arg: any) => any,
+) {
   const cachedReducer = useMemo(() => produce(reducer), [reducer]);
-  return useReducer(cachedReducer, initialState as any, initialAction);
+  return useReducer(cachedReducer, initialState, initialAction);
 }

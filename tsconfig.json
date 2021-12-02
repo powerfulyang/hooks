@@ -4,10 +4,8 @@
     "outDir": "./dist/main",
     "module": "commonjs",
     "target": "esnext",
-    "lib": ["es6", "dom", "esnext.asynciterable"],
     "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
@@ -21,14 +19,6 @@
     "declaration": true,
     "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
-  ],
+  "exclude": ["node_modules"],
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
