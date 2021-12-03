@@ -1,31 +1,43 @@
 import { enableAllPlugins, produce } from 'immer';
 import { useCallback, useState } from 'react';
 import type { ReturnTypedFunction, VoidFunction } from '@powerfulyang/utils';
-import { isFunction } from '@powerfulyang/utils';
+import { isVoid, isFunction } from '@powerfulyang/utils';
 
 enableAllPlugins();
 
-export function useImmer<T = any>(initialValue?: T | ReturnTypedFunction<T>) {
-  const [val, updateValue] = useState(initialValue);
+export function useImmer<T>(
+  initialState: T | ReturnTypedFunction<T>,
+): [T, VoidFunction<[T | VoidFunction<[T]> | ReturnTypedFunction<T>]>, VoidFunction];
 
-  return [
-    val,
-    useCallback((updater: T | VoidFunction<T> | ReturnTypedFunction<T>) => {
+export function useImmer<T = undefined>(): [
+  T | undefined,
+  VoidFunction<[T | VoidFunction<[T]> | ReturnTypedFunction<T>]>,
+  VoidFunction,
+];
+
+/**
+ * @description Hook for immer
+ * @param initialValue
+ * @returns [state, setState, resetState]
+ */
+export function useImmer<T = any>(initialValue?: T | ReturnTypedFunction<T>) {
+  const [value, updateValue] = useState(initialValue);
+  const setState = useCallback(
+    (updater: T | VoidFunction<[T | undefined]> | ReturnTypedFunction<T>) => {
       if (isFunction(updater)) {
-        const returnValue = updater();
-        if (!returnValue) {
-          return updateValue((v) => produce(v, updater));
-        }
-        return updateValue(returnValue);
+        updateValue((v) => {
+          const returnValue = updater(v);
+          if (isVoid(returnValue)) {
+            return produce(v, updater);
+          }
+          return returnValue;
+        });
       }
       return updateValue(updater);
-      // updateValue(produce(newState))
-      // OR
-      // example updater = (state)=> state.property = newVal
-      //
-      // updateValue(producedUpdater);
-      //
-      // producedUpdater to be called and get return value
-    }, []),
-  ] as const;
+    },
+    [],
+  );
+  const resetState = useCallback(() => updateValue(initialValue), [initialValue]);
+
+  return [value, setState, resetState] as const;
 }

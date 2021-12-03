@@ -1,6 +1,11 @@
 import { useCallback, useEffect } from 'react';
 import { isFunction } from '@powerfulyang/utils';
 
+/**
+ * @description Hook to handle before unload event
+ * @param enabled
+ * @param message
+ */
 export const useBeforeUnload = (enabled: boolean | (() => boolean) = true, message?: string) => {
   const handler = useCallback(
     (event: BeforeUnloadEvent) => {
