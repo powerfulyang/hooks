@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/hooks",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "util hooks",
   "keywords": [
     "react-hooks"
@@ -42,11 +42,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@powerfulyang/lint": "^0.7.4",
-    "@storybook/addon-actions": "^6.4.5",
-    "@storybook/addon-essentials": "^6.4.5",
-    "@storybook/addon-links": "^6.4.5",
-    "@storybook/react": "^6.4.5",
+    "@powerfulyang/lint": "^0.7.5",
+    "@storybook/addon-actions": "^6.4.7",
+    "@storybook/addon-essentials": "^6.4.7",
+    "@storybook/addon-links": "^6.4.7",
+    "@storybook/react": "^6.4.7",
     "@testing-library/react-hooks": "^7.0.2",
     "babel-loader": "^8.2.3",
     "husky": "^7.0.4",
