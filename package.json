@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/hooks",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "util hooks",
   "keywords": [
     "react-hooks"
@@ -23,12 +23,13 @@
     "url": "git+https://github.com/powerfulyang/tools.git"
   },
   "scripts": {
+    "patch-version": "npm version patch --no-git-tag-version",
     "build": "rimraf dist && run-s build:*",
     "build:init": "node ./init.js",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "watch:build": "tsc -p tsconfig.module.json --watch",
-    "prettier": "prettier \"src/**/*.ts\" --write",
+    "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -42,14 +43,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@powerfulyang/lint": "^0.7.4",
-    "@storybook/addon-actions": "^6.4.5",
-    "@storybook/addon-essentials": "^6.4.5",
-    "@storybook/addon-links": "^6.4.5",
-    "@storybook/react": "^6.4.5",
+    "@powerfulyang/lint": "^0.7.9",
+    "@storybook/addon-actions": "^6.4.7",
+    "@storybook/addon-essentials": "^6.4.7",
+    "@storybook/addon-links": "^6.4.7",
+    "@storybook/react": "^6.4.7",
     "@testing-library/react-hooks": "^7.0.2",
     "babel-loader": "^8.2.3",
-    "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
