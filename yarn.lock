@@ -1604,10 +1604,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
   integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
 
-"@powerfulyang/lint@^0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@powerfulyang/lint/-/lint-0.7.5.tgz#3528b787a43badaca3382f830393b6a07d592e8f"
-  integrity sha512-dDvGeUW+D5wcFwQoRsRYkrUrtkXfSWtW02Zk2ZHmqA6W+X35dZTnlIAVdHLLYlGQZ1Mlc+UtaidmRI2yID+fSA==
+"@powerfulyang/lint@^0.7.9":
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/@powerfulyang/lint/-/lint-0.7.9.tgz#1b124878700a1521488a0d48dbf29bf93fe57727"
+  integrity sha512-AdziS7VfREboL06aFNtkJXiGgC+VZR/7FTug2aR8u/3najt8Hs96Zgg4qCC3bJkwkrTyNdvnBF/nIm13wQ9uYw==
   dependencies:
     "@types/jest" "^27.0.3"
     "@types/node" "^16.11.10"
@@ -1627,6 +1627,7 @@
     eslint-plugin-react "^7.27.1"
     eslint-plugin-react-hooks "^4.3.0"
     eslint-plugin-unicorn "^39.0.0"
+    husky "^7.0.4"
     jest "^27.4.0"
     postcss "^8.4.4"
     postcss-scss "^4.0.2"
