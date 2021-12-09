@@ -1,4 +1,5 @@
 export * from './hooks/useBeforeUnload';
+export * from './hooks/useDocumentVisible';
 export * from './hooks/useEffectOnState';
 export * from './hooks/useImmer';
 export * from './hooks/useImmerReducer';
