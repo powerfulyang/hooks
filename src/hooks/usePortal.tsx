@@ -1,33 +1,23 @@
-import type { FC, ReactNode } from 'react';
-import { useCallback, useEffect, useRef } from 'react';
+import type { FC } from 'react';
+import { useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
-import { isClient } from '@powerfulyang/utils';
+import { isFunction } from '@powerfulyang/utils';
 
-interface PortalProps {
-  id?: string;
-  container?: HTMLElement | (() => HTMLElement);
-}
+type PortalProps<T = HTMLElement> = {
+  container: T | (() => T);
+};
 
-export function usePortal(props: PortalProps = {}) {
-  const { id, container } = props;
-  const rootElemRef = useRef<Element | HTMLElement | null>(isClient ? document.body : null);
-
-  useEffect(() => {
-    const containerElement = typeof container === 'function' ? container() : container;
-
-    // Look for existing target dom element to append to
-    const existingParent = id && document.querySelector(`#${id}`);
+export function usePortal({ container }: PortalProps) {
+  const rootElement = useMemo(() => {
+    const containerElement = isFunction(container) ? container() : container;
     // Parent is either a new root or the existing dom element
-    rootElemRef.current = containerElement || existingParent || document.body;
-  }, [container, id]);
+    return containerElement || document.body;
+  }, [container]);
 
-  const Portal: FC<any> = useCallback(
-    ({ children }: { children: ReactNode }) => {
-      if (rootElemRef.current != null) return createPortal(children, rootElemRef.current);
-      return null;
-    },
-    [rootElemRef],
+  const Portal: FC = useCallback(
+    ({ children }) => createPortal(children, rootElement),
+    [rootElement],
   );
 
-  return { target: rootElemRef.current, Portal };
+  return { target: rootElement, Portal };
 }
