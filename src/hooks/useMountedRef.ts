@@ -11,5 +11,5 @@ export function useMountedRef() {
     };
   }, []);
 
-  return mountedRef.current;
+  return mountedRef;
 }
