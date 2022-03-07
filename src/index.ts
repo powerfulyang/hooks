@@ -4,6 +4,7 @@ export * from './hooks/useEffectOnState';
 export * from './hooks/useImmer';
 export * from './hooks/useImmerReducer';
 export * from './hooks/useIsomorphicLayoutEffect';
+export * from './hooks/useLockScroll';
 export * from './hooks/useMountedRef';
 export * from './hooks/usePageLeave';
 export * from './hooks/usePageQuery';

@@ -20,6 +20,7 @@ describe('test immer', () => {
     const newState = produce(baseState, (draft) => {
       draft.a += 1;
     });
+    expect(Object.is(baseState, newState)).toBe(false);
     expect(baseState).toStrictEqual({ a: 1 });
     expect(newState).toStrictEqual({ a: 2 });
   });
