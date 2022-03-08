@@ -12,14 +12,11 @@ const useClientQuery: UseQueryParam = (param) => {
       setValue(getValue(window.location.search, param));
     };
 
+    // TODO implement pushState and replaceState
     window.addEventListener('popstate', onChange);
-    window.addEventListener('pushstate', onChange);
-    window.addEventListener('replacestate', onChange);
 
     return () => {
       window.removeEventListener('popstate', onChange);
-      window.removeEventListener('pushstate', onChange);
-      window.removeEventListener('replacestate', onChange);
     };
   }, [param]);
 

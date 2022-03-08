@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import { fromEvent } from 'rxjs';
 
-export const useLockScroll = () => {
+/**
+ * @description Hook to lock scroll depend on lock state
+ * @param lock 是否锁定
+ */
+export const useLockScroll = (lock: boolean) => {
   /**
    * A boolean value that, if true,
    * indicates that the function specified by listener will never call preventDefault().
@@ -12,18 +16,21 @@ export const useLockScroll = () => {
    * See Improving scrolling performance with passive listeners to learn more.
    */
   useEffect(() => {
-    const subscription1 = fromEvent(document.body, 'touchmove', { passive: false }).subscribe(
-      (e) => {
+    if (lock) {
+      const subscription1 = fromEvent(document.body, 'touchmove', { passive: false }).subscribe(
+        (e) => {
+          e.preventDefault();
+        },
+      );
+      const subscription2 = fromEvent(document.body, 'wheel', { passive: false }).subscribe((e) => {
         e.preventDefault();
-      },
-    );
-    const subscription2 = fromEvent(document.body, 'wheel', { passive: false }).subscribe((e) => {
-      e.preventDefault();
-    });
+      });
 
-    return () => {
-      subscription1.unsubscribe();
-      subscription2.unsubscribe();
-    };
-  }, []);
+      return () => {
+        subscription1.unsubscribe();
+        subscription2.unsubscribe();
+      };
+    }
+    return () => {};
+  }, [lock]);
 };
