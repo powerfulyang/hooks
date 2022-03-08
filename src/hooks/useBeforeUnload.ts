@@ -3,8 +3,8 @@ import { isFunction } from '@powerfulyang/utils';
 
 /**
  * @description Hook to handle before unload event
- * @param enabled
- * @param message
+ * @param enabled - Enable or disable before unload event
+ * @param message - Message to show in before unload event
  */
 export const useBeforeUnload = (enabled: boolean | (() => boolean) = true, message?: string) => {
   const handler = useCallback(
