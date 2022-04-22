@@ -8,10 +8,10 @@ export const useEffectOnState = <T extends DependencyList>(
   dependencies: T,
   effectState: ValuesType<T>,
 ) => {
-  const previous = usePreviousRef(effectState);
+  const previous = usePreviousRef(effectState, dependencies);
   useEffect(() => {
     if (previous !== effectState) {
       effect();
     }
-  }, [effect, effectState, previous]);
+  }, [effect, effectState, dependencies, previous]);
 };
