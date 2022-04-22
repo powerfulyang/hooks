@@ -14,6 +14,7 @@ describe('useImmer', () => {
      *     } = renderHook(() => useImmer({ a: 1 }));
      * ```
      * 这样子的形式, 这样似乎 current 的 reference 不会变化
+     * 妈的智障，当然不会变化
      */
     const { result } = renderHook(() =>
       useImmer({

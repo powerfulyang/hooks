@@ -1,10 +1,11 @@
+import { isClient } from '@powerfulyang/utils';
 import { useEffect, useState } from 'react';
 
 const getValue = (search: string, param: string) => new URLSearchParams(search).get(param);
 
 export type UseQueryParam = (param: string) => string | null;
 
-const useClientQuery: UseQueryParam = (param) => {
+const usePageQueryClient: UseQueryParam = (param) => {
   const [value, setValue] = useState<string | null>(() => getValue(window.location.search, param));
 
   useEffect(() => {
@@ -23,6 +24,6 @@ const useClientQuery: UseQueryParam = (param) => {
   return value;
 };
 
-const useSearchParamServer = () => null;
+const usePageQueryServer = () => null;
 
-export const usePageQuery = typeof window === 'object' ? useClientQuery : useSearchParamServer;
+export const usePageQuery = isClient ? usePageQueryClient : usePageQueryServer;
