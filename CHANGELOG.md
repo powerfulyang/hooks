@@ -30,4 +30,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Code Refactoring
 
-- **Almost All:** 很大的改动 ([a39398b](https://github.com/powerfulyang/tools/commit/a39398b3981a0f788a1eebaeb2f1d97b6dbd9825))
+- **Almost All:** 很大的改动 ([c66baac](https://github.com/powerfulyang/tools/commit/c66baac08afa8a8811df02cd8569cd6054893041))
