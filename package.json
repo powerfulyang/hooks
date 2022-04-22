@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/hooks",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "description": "util hooks",
   "keywords": [
     "react-hooks"
@@ -31,7 +31,6 @@
     "url": "git+https://github.com/powerfulyang/tools.git"
   },
   "scripts": {
-    "patch-version": "npm version patch --no-git-tag-version",
     "build": "rimraf dist && run-s build:*",
     "build:init": "node ./init.js",
     "build:cjs": "tsc -p tsconfig.cjs.json",

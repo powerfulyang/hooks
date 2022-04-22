@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.12](https://github.com/powerfulyang/tools/compare/v0.3.11...v0.3.12) (2022-04-22)
+
+### CI
+
+- **github action:** release-please ([f555b15](https://github.com/powerfulyang/tools/commit/f555b1581c7e076a323ca65d80dd9d35339d9e12))
+
 ### 0.3.11 (2022-04-22)
 
 ### Features
