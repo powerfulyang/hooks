@@ -11,5 +11,4 @@ export * from './hooks/usePageQuery';
 export * from './hooks/usePortal';
 export * from './hooks/usePreviousRef';
 export * from './hooks/useRafImmer';
-export * from './hooks/useRafState';
 export * from './hooks/useRenderCount';
