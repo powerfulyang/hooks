@@ -8,12 +8,11 @@ import { isFunction } from '@powerfulyang/utils';
  */
 export const useBeforeUnload = (enabled: boolean | (() => boolean) = true, message?: string) => {
   const handler = useCallback(
-    (event: BeforeUnloadEvent) => {
+    (draft: BeforeUnloadEvent) => {
       const finalEnabled = isFunction(enabled) ? enabled() : enabled;
 
       if (finalEnabled) {
-        // eslint-disable-next-line no-param-reassign
-        event.returnValue = message;
+        draft.returnValue = message;
       }
     },
     [enabled, message],
