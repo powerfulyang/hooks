@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from 'react';
-import { useCallback, useMemo } from 'react';
+import { Fragment, useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { isClient, isFunction } from '@powerfulyang/utils';
 
@@ -10,14 +10,14 @@ export function usePortalClient(container: HTMLElement | (() => HTMLElement)) {
     return containerElement || document.body;
   }, [container]);
 
-  const Portal: FC<PropsWithChildren<never>> = useCallback(
+  const Portal: FC<PropsWithChildren<unknown>> = useCallback(
     ({ children }) => createPortal(children, rootElement),
     [rootElement],
   );
 
-  return { target: rootElement, Portal };
+  return Portal;
 }
 
-const usePortalServer = () => null;
+const usePortalServer = () => Fragment;
 
 export const usePortal = isClient ? usePortalClient : usePortalServer;
