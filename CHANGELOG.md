@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/powerfulyang/hooks/compare/v1.0.1...v1.0.2) (2022-04-24)
+
+
+### Bug Fixes
+
+* fix(deps): update dependency @powerfulyang/lint to v1.0.2 ([1fac872](https://github.com/powerfulyang/hooks/commit/1fac87207fbebee1e7e6f16db7189b1a276e81d6))
+
 ### [1.0.1](https://github.com/powerfulyang/hooks/compare/v1.0.0...v1.0.1) (2022-04-24)
 
 ### Bug Fixes
