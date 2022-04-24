@@ -7,6 +7,13 @@
 
 * usePortal.tsx define incorrectly ([52322a6](https://github.com/powerfulyang/hooks/commit/52322a61c09d2d78ffc7d9704d2f58ec1d231b94))
 
+### [1.0.1](https://github.com/powerfulyang/hooks/compare/v1.0.0...v1.0.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* usePortal.tsx define incorrectly ([52322a6](https://github.com/powerfulyang/hooks/commit/52322a61c09d2d78ffc7d9704d2f58ec1d231b94))
+
 ## 1.0.0 (2022-04-23)
 
 
