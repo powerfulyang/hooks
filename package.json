@@ -50,9 +50,7 @@
     "url": "https://github.com/powerfulyang/hooks/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.3",
-    "@commitlint/config-conventional": "16.2.1",
-    "@powerfulyang/lint": "0.7.14",
+    "@powerfulyang/lint": "1.0.2",
     "@testing-library/react-hooks": "8.0.0",
     "@types/react": "18.0.6",
     "@types/react-dom": "18.0.2",
