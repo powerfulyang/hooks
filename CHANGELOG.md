@@ -1,5 +1,18 @@
 # Changelog
 
+### [1.0.2](https://github.com/powerfulyang/hooks/compare/v1.0.0...v1.0.2) (2022-04-24)
+
+
+### Bug Fixes
+
+* fix(deps): update dependency @powerfulyang/lint to v1.0.2 ([8629843](https://github.com/powerfulyang/hooks/commit/8629843a78d46681c62c2ebcc538f97ebd7b589a))
+* usePortal.tsx define incorrectly ([cd9068c](https://github.com/powerfulyang/hooks/commit/cd9068cb58ec307ddf13090ed725ff9a12cf2168))
+
+
+### Miscellaneous Chores
+
+* release 1.0.2 ([f67ac66](https://github.com/powerfulyang/hooks/commit/f67ac6627df6cc50a2f722df0dffb213338ea36d))
+
 ### [1.0.1](https://github.com/powerfulyang/hooks/compare/v1.0.0...v1.0.1) (2022-04-24)
 
 ### Bug Fixes
