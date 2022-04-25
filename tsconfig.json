@@ -4,7 +4,7 @@
     "module": "ESNext",
     "target": "ESNext",
     "sourceMap": true,
-    "jsx": "react-jsxdev",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
