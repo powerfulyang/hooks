@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.4](https://github.com/powerfulyang/hooks/compare/v1.0.3...v1.0.4) (2022-04-25)
+
+
+### Bug Fixes
+
+* **package.json:** typo ([fcc6728](https://github.com/powerfulyang/hooks/commit/fcc67284c69a5deb26b7040797d31a2511fe7fef))
+
 ### [1.0.3](https://github.com/powerfulyang/hooks/compare/v1.0.2...v1.0.3) (2022-04-25)
 
 
