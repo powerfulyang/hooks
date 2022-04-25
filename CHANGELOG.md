@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.5](https://github.com/powerfulyang/hooks/compare/v1.0.4...v1.0.5) (2022-04-25)
+
+
+### Bug Fixes
+
+* **tsconfig.json:** react-jsx 到底是个啥玩意啊，前端远离 tsc ([0574e63](https://github.com/powerfulyang/hooks/commit/0574e632b31e8039511aa8b9b620e8c9f34c9b43))
+
 ### [1.0.4](https://github.com/powerfulyang/hooks/compare/v1.0.3...v1.0.4) (2022-04-25)
 
 ### Bug Fixes
