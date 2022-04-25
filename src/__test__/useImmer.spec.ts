@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useImmer } from '../hooks/useImmer';
+import { useImmer } from '@/hooks/useImmer';
 
 describe('useImmer', () => {
   it('immer T', () => {

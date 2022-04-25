@@ -1,5 +1,9 @@
+const tsconfig = require('./tsconfig.json');
+const moduleNameMapper = require('tsconfig-paths-jest')(tsconfig);
+
 module.exports = {
-  moduleFileExtensions: ['ts', 'tsx'],
+  moduleNameMapper,
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "CommonJS",
+    "module": "ESNext",
     "target": "ESNext",
     "sourceMap": true,
     "jsx": "react-jsxdev",
@@ -15,8 +15,11 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
-    "declaration": true,
-    "esModuleInterop": true
+    "declaration": false,
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*.ts", "src/**/*.tsx"]
