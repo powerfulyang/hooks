@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.6](https://github.com/powerfulyang/hooks/compare/v1.0.5...v1.0.6) (2022-04-25)
+
+
+### Bug Fixes
+
+* useImmerReducer.ts import incorrect produce ([1dfd4c5](https://github.com/powerfulyang/hooks/commit/1dfd4c5e5d4bb64eab6d672c343b71a3dbb27f58))
+
 ### [1.0.5](https://github.com/powerfulyang/hooks/compare/v1.0.4...v1.0.5) (2022-04-25)
 
 
