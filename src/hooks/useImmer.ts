@@ -4,7 +4,6 @@ import type { ReturnTypedFunction, VoidFunction } from '@powerfulyang/utils';
 import { isFunction } from '@powerfulyang/utils';
 
 enableAllPlugins();
-
 setAutoFreeze(false);
 
 export function useImmer<T>(

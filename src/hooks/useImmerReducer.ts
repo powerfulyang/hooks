@@ -1,7 +1,10 @@
 import type { Draft } from 'immer';
-import produce from 'immer';
+import { produce, enableAllPlugins, setAutoFreeze } from 'immer';
 import type { Dispatch } from 'react';
 import { useMemo, useReducer } from 'react';
+
+enableAllPlugins();
+setAutoFreeze(false);
 
 /**
  * @description Hook for creating a reducer with immer.
