@@ -1,9 +1,7 @@
 import pkg from './package.json';
 import typescript from '@rollup/plugin-typescript';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
 
-const pkgDeps = Array.from(Object.keys(pkg.dependencies));
+const pkgDeps = Array.from(Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies }));
 
 export default {
   input: 'src/index.ts',
@@ -25,6 +23,6 @@ export default {
       dir: 'dist/es',
     },
   ],
-  plugins: [resolve(), typescript(), commonjs()],
+  plugins: [typescript()],
   external: [...pkgDeps],
 };
