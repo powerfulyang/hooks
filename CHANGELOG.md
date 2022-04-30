@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/powerfulyang/hooks/compare/v1.0.6...v1.1.0) (2022-04-30)
+
+
+### Features
+
+* new version linter ([d47f4eb](https://github.com/powerfulyang/hooks/commit/d47f4eb139e7dd81cdbed712c71e0f4a1b4ab196))
+
 ### [1.0.6](https://github.com/powerfulyang/hooks/compare/v1.0.5...v1.0.6) (2022-04-25)
 
 
