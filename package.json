@@ -40,22 +40,22 @@
     "prebuild": "rimraf dist && node ./check.js",
     "build": "run-p build:*",
     "build:source": "rollup -c",
-    "build:types": "tsc -p tsconfig.types.json",
+    "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
     "lint:js": "eslint --ext .ts,.tsx ./src --fix",
     "postprepare": "husky install && install-peers",
     "tsc-check": "tsc --noEmit",
-    "pre-commit": "npm run tsc-check && lint-staged",
+    "test": "jest",
+    "pre-commit": "npm run tsc-check && npm run test && lint-staged",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@powerfulyang/lint": "1.4.12",
+    "@powerfulyang/lint": "1.6.1",
     "@rollup/plugin-typescript": "8.3.2",
-    "@testing-library/react": "13.1.1",
-    "tsconfig-paths-jest": "0.0.1"
+    "@testing-library/react": "13.1.1"
   },
   "peerDependencies": {
-    "@powerfulyang/utils": "^1.4.2",
+    "@powerfulyang/utils": "^1.4.3",
     "immer": "^9.0.12",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
