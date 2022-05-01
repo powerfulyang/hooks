@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/powerfulyang/hooks/compare/v1.1.0...v1.1.1) (2022-05-01)
+
+
+### Bug Fixes
+
+* declaration paths didn't transform ([aa5b5df](https://github.com/powerfulyang/hooks/commit/aa5b5dfa07e436995444b978c5e447bfdd1855f7))
+
 ## [1.1.0](https://github.com/powerfulyang/hooks/compare/v1.0.6...v1.1.0) (2022-04-30)
 
 
