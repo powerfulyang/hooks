@@ -52,7 +52,7 @@
   "devDependencies": {
     "@powerfulyang/lint": "1.6.1",
     "@rollup/plugin-typescript": "8.3.2",
-    "@testing-library/react": "13.1.1"
+    "@testing-library/react": "13.2.0"
   },
   "peerDependencies": {
     "@powerfulyang/utils": "^1.4.3",
