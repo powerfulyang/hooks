@@ -50,15 +50,15 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@powerfulyang/lint": "1.6.1",
+    "@powerfulyang/lint": "2.0.2",
     "@rollup/plugin-typescript": "8.3.4",
     "@testing-library/react": "13.3.0"
   },
   "peerDependencies": {
-    "@powerfulyang/utils": "^1.4.3",
-    "immer": "^9.0.12",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "rxjs": "^7.5.5"
+    "@powerfulyang/utils": "^1.4.4",
+    "immer": "^9.0.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rxjs": "^7.5.6"
   }
 }
