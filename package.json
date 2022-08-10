@@ -43,7 +43,7 @@
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
     "lint:js": "eslint --ext .ts,.tsx ./src --fix",
-    "postprepare": "husky install && install-peers",
+    "postprepare": "husky install",
     "tsc-check": "tsc --noEmit",
     "test": "jest",
     "pre-commit": "npm run tsc-check && npm run test && lint-staged",
@@ -55,10 +55,10 @@
     "@testing-library/react": "13.3.0"
   },
   "peerDependencies": {
-    "@powerfulyang/utils": "^1.4.4",
     "immer": "^9.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rxjs": "^7.5.6"
+    "rxjs": "^7.5.6",
+    "@powerfulyang/utils": "*"
   }
 }

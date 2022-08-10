@@ -1,14 +1,14 @@
-import type { ReturnTypedFunction, VoidFunction } from '@powerfulyang/utils';
+import type { ReturnFunction, VoidFunction } from '@powerfulyang/utils';
 import { useCallback, useEffect, useRef } from 'react';
 import { useImmer } from './useImmer';
 
 export function useRafImmer<T>(
-  initialState: T | ReturnTypedFunction<T>,
-): [T, VoidFunction<[T | VoidFunction<[T]> | ReturnTypedFunction<T, [T]>]>, VoidFunction];
+  initialState: T | ReturnFunction<T>,
+): [T, VoidFunction<[T | VoidFunction<[T]> | ReturnFunction<T, [T]>]>, VoidFunction];
 
 export function useRafImmer<T>(): [
   T | undefined,
-  VoidFunction<[T | VoidFunction<[T | undefined]> | ReturnTypedFunction<T, [T | undefined]>]>,
+  VoidFunction<[T | VoidFunction<[T | undefined]> | ReturnFunction<T, [T | undefined]>]>,
   VoidFunction,
 ];
 
