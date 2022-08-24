@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@powerfulyang/lint": "2.0.2",
-    "@rollup/plugin-typescript": "8.3.4",
+    "@rollup/plugin-typescript": "8.4.0",
     "@testing-library/react": "13.3.0",
     "typescript": "latest"
   },
