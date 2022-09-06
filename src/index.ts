@@ -12,3 +12,4 @@ export * from './hooks/usePortal';
 export * from './hooks/usePreviousRef';
 export * from './hooks/useRafImmer';
 export * from './hooks/useRenderCount';
+export * from './hooks/useOutsideClick';
