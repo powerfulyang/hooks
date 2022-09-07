@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/powerfulyang/hooks/compare/v1.1.1...v1.2.0) (2022-09-06)
+
+
+### Features
+
+* @powerfulyang/lint@3.1.0 ([32a5c5c](https://github.com/powerfulyang/hooks/commit/32a5c5cfadcde4a1bf05c4ad528f243cc2d6f9b3))
+* typescript explicitly ([9d02419](https://github.com/powerfulyang/hooks/commit/9d02419350bdb9fbfceb19a29d74e1aea40ccc97))
+
 ### [1.1.1](https://github.com/powerfulyang/hooks/compare/v1.1.0...v1.1.1) (2022-05-01)
 
 
