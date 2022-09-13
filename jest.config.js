@@ -14,4 +14,5 @@ module.exports = {
     '^.+\\.(ts|tsx)$': '@swc/jest',
   },
   setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.ts'],
+  testEnvironment: 'jsdom',
 };

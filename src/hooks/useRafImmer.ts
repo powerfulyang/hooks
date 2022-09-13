@@ -17,7 +17,7 @@ export function useRafImmer(initialState?: any) {
   const [state, setState] = useImmer(initialState);
 
   const setRafState = useCallback(
-    (value) => {
+    (value: any) => {
       cancelAnimationFrame(frame.current);
 
       frame.current = requestAnimationFrame(() => {
