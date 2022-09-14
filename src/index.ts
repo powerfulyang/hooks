@@ -14,3 +14,4 @@ export * from './hooks/useRafImmer';
 export * from './hooks/useRenderCount';
 export * from './hooks/useOutsideClick';
 export * from './hooks/useLatest';
+export * from './hooks/useScrollDirection';
