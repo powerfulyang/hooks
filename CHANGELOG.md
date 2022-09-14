@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/powerfulyang/hooks/compare/v1.2.0...v1.3.0) (2022-09-14)
+
+
+### Features
+
+* components -> tooltip, hooks -> useLatest ([58c8253](https://github.com/powerfulyang/hooks/commit/58c8253b47e59e5fa9393a15eae0847998e310f9))
+* useScrollDirection ([3a1e372](https://github.com/powerfulyang/hooks/commit/3a1e3727036214e5880684c3bb200d6eca3fca4b))
+
+
+### Bug Fixes
+
+* components -> menu, activeKey ([d9ff3ab](https://github.com/powerfulyang/hooks/commit/d9ff3ab9890078c14723753962e68792c6585fb0))
+* components -> Menu:focus should listen press arrowUp/arrowDown/l/r event ([c60f279](https://github.com/powerfulyang/hooks/commit/c60f279198e65d27cbfb06c682c53799fe5e31bd))
+
 ## [1.2.0](https://github.com/powerfulyang/hooks/compare/v1.1.1...v1.2.0) (2022-09-06)
 
 
