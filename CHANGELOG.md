@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/powerfulyang/hooks/compare/v1.3.0...v1.4.0) (2022-11-03)
+
+
+### Features
+
+* add unit test for usePrevious, drop some useless hooks ([e425759](https://github.com/powerfulyang/hooks/commit/e42575966f77ebaecb0040be53d79f90b7035df6))
+
 ## [1.3.0](https://github.com/powerfulyang/hooks/compare/v1.2.0...v1.3.0) (2022-09-14)
 
 
