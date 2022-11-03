@@ -1,4 +1,4 @@
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
 
 const pkgDeps = Array.from(Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies }));
