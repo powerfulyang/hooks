@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const hooks = fs.readdirSync(path.join(__dirname, './src/hooks'));
 const exportContent = fs.readFileSync(path.join(__dirname, './src/index.ts'));

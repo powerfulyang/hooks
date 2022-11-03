@@ -1,11 +1,11 @@
 import { fromEvent } from 'rxjs';
 import { useEffect, useState } from 'react';
 import { isNull } from '@powerfulyang/utils';
-import { usePreviousRef } from './usePreviousRef';
+import { usePrevious } from './usePrevious';
 
 export const usePageLeave = (onPageLeave: VoidFunction) => {
   const [isLeaved, setIsLeaved] = useState(false);
-  const previous = usePreviousRef(isLeaved);
+  const previous = usePrevious(isLeaved);
   useEffect(() => {
     if (!previous && isLeaved) {
       onPageLeave();

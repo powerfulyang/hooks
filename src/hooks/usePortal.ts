@@ -6,6 +6,7 @@ import { useLatest } from '@/hooks/useLatest';
 
 export function usePortalClient(container?: HTMLElement | (() => HTMLElement)) {
   const getContainer = useLatest(container);
+
   const rootElement = useMemo(() => {
     const containerElement = isFunction(getContainer.current)
       ? getContainer.current()
@@ -14,7 +15,7 @@ export function usePortalClient(container?: HTMLElement | (() => HTMLElement)) {
     return containerElement || document.body;
   }, [getContainer]);
 
-  const Portal: FC<PropsWithChildren<unknown>> = useCallback(
+  const Portal: FC<PropsWithChildren> = useCallback(
     ({ children }) => createPortal(children, rootElement),
     [rootElement],
   );
