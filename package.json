@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@powerfulyang/lint": "latest",
-    "@rollup/plugin-typescript": "9.0.2",
+    "@rollup/plugin-typescript": "10.0.1",
     "@testing-library/react": "13.4.0",
     "typescript": "latest",
     "@types/lodash-es": "latest"
