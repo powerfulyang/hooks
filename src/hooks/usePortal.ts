@@ -15,7 +15,7 @@ export function usePortalClient(container?: HTMLElement | (() => HTMLElement)) {
     return containerElement || document.body;
   }, [getContainer]);
 
-  const Portal: FC<PropsWithChildren> = useCallback(
+  const Portal: FC<PropsWithChildren<unknown>> = useCallback(
     ({ children }) => createPortal(children, rootElement),
     [rootElement],
   );

@@ -22,56 +22,63 @@ describe('useImmer', () => {
       }),
     );
 
+    const setState = result.current[1];
     // 直接赋值
     act(() => {
-      result.current[1]({ a: 2 });
+      setState({ a: 2 });
     });
 
-    expect(result.current[0]).toEqual({
+    const state = result.current[0];
+    expect(state).toEqual({
       a: 2,
     });
 
     // immer 赋值
     act(() => {
-      result.current[1]((draft) => {
+      setState((draft) => {
         draft.a = 3;
       });
     });
 
-    expect(result.current[0]).toEqual({
+    const newState = result.current[0];
+    expect(newState).toEqual({
       a: 3,
     });
 
     // 直接 return 形式
     act(() => {
-      result.current[1](() => ({
+      setState(() => ({
         a: 4,
       }));
     });
 
-    expect(result.current[0]).toEqual({
+    const newState2 = result.current[0];
+    expect(newState2).toEqual({
       a: 4,
     });
 
+    const resetState = result.current[2];
     act(() => {
-      result.current[2]();
+      resetState();
     });
 
-    expect(result.current[0]).toEqual({
+    const originState = result.current[0];
+    expect(originState).toEqual({
       a: 1,
     });
   });
 
-  it('immer ()=>T', () => {
+  it('immer () => T', () => {
     const { result } = renderHook(() =>
       useImmer(() => ({
         a: 1,
       })),
     );
 
+    const setState = result.current[1];
     // 直接赋值
     act(() => {
-      result.current[1]({ a: 2 });
+      setState({ a: 2 });
     });
 
     expect(result.current[0]).toEqual({
@@ -80,7 +87,7 @@ describe('useImmer', () => {
 
     // immer 赋值
     act(() => {
-      result.current[1]((draft) => {
+      setState((draft) => {
         draft.a = 3;
       });
     });
@@ -91,7 +98,7 @@ describe('useImmer', () => {
 
     // 直接 return 形式
     act(() => {
-      result.current[1](() => ({
+      setState(() => ({
         a: 4,
       }));
     });
