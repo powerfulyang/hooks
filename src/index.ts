@@ -7,7 +7,6 @@ export * from './hooks/useLockScroll';
 export * from './hooks/useMountedRef';
 export * from './hooks/usePageLeave';
 export * from './hooks/usePageQuery';
-export * from './hooks/usePortal';
 export * from './hooks/usePrevious';
 export * from './hooks/useRenderCount';
 export * from './hooks/useOutsideClick';
