@@ -3,5 +3,4 @@ dist
 .idea/*
 tsconfig.tsbuildinfo
 package-lock.json
-pnpm-lock.yaml
 .turbo

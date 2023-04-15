@@ -13,4 +13,13 @@ module.exports = {
   },
   setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.ts'],
   testEnvironment: 'jsdom',
+  reporters: process.env.CI && [
+    [
+      'github-actions',
+      {
+        silent: false,
+      },
+    ],
+    'summary',
+  ],
 };
