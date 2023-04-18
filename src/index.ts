@@ -1,3 +1,8 @@
+import { enableMapSet, enablePatches } from 'immer';
+
+enablePatches();
+enableMapSet();
+
 export * from './hooks/useBeforeUnload';
 export * from './hooks/useDocumentVisible';
 export * from './hooks/useImmer';

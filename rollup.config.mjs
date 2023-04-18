@@ -1,5 +1,9 @@
-import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
+import { readFileSync } from 'node:fs';
+
+// read package.json dependencies and peerDependencies
+const str = new URL('./package.json', import.meta.url);
+const pkg = JSON.parse(readFileSync(str, 'utf8'));
 
 const pkgDeps = Array.from(Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies }));
 
@@ -23,6 +27,10 @@ export default {
       dir: 'dist/es',
     },
   ],
-  plugins: [typescript()],
+  plugins: [
+    typescript({
+      tsconfig: './tsconfig.build.json',
+    }),
+  ],
   external: [...pkgDeps],
 };

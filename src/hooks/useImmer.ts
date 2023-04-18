@@ -1,10 +1,7 @@
-import { enableAllPlugins, produce, setAutoFreeze } from 'immer';
+import { produce } from 'immer';
 import { useCallback, useRef, useState } from 'react';
 import type { ReturnFunction, VoidFunction } from '@powerfulyang/utils';
 import { isFunction } from '@powerfulyang/utils';
-
-enableAllPlugins();
-setAutoFreeze(false);
 
 export function useImmer<T>(
   initialState: T | ReturnFunction<T>,
