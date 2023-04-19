@@ -59,7 +59,7 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
-    "@powerfulyang/utils": "1.9.2",
+    "@powerfulyang/utils": "1.10.0",
     "immer": "10.0.1",
     "lodash-es": "4.17.21",
     "rxjs": "7.8.0"
