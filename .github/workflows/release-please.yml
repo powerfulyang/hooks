@@ -1,11 +1,18 @@
+name: release-please
+
 on:
   push:
     branches:
       - master
-name: release-please
+
 jobs:
   release-please:
-    runs-on: ubuntu-latest
+    name: release-please
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [lts/*]
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release
@@ -18,12 +25,14 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm i
+      - run: pnpm install
         if: ${{ steps.release.outputs.release_created }}
-      - name: login
+      - name: npm login
         run: echo //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} > ~/.npmrc
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - run: pnpm publish
         if: ${{ steps.release.outputs.release_created }}

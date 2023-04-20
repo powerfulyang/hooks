@@ -1,5 +1,6 @@
 import { produce, setAutoFreeze } from 'immer';
 import { isVoid } from '@powerfulyang/utils';
+import { beforeAll, describe, expect, it } from '@jest/globals';
 
 describe('test immer', () => {
   beforeAll(() => {
