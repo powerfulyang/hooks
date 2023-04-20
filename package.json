@@ -50,22 +50,23 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@jest/globals": "29.5.0",
     "@powerfulyang/lint": "3.2.1",
     "@rollup/plugin-typescript": "11.1.0",
     "@testing-library/react": "14.0.0",
     "@types/lodash-es": "4.17.7",
+    "@types/node": "18.15.12",
+    "@types/react": "18.0.37",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
     "typescript": "5.0.4"
   },
   "dependencies": {
-    "@powerfulyang/utils": "1.9.2",
+    "@powerfulyang/utils": "1.10.0",
     "immer": "10.0.1",
     "lodash-es": "4.17.21",
     "rxjs": "7.8.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   }
 }
