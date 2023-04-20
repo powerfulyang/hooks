@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/powerfulyang/hooks/compare/v1.4.0...v1.5.0) (2023-04-20)
+
+
+### Features
+
+* jest from @jest/globals ([554bc3c](https://github.com/powerfulyang/hooks/commit/554bc3ca2986e9a886ebae9186862a1d387beff4))
+
+
+### Bug Fixes
+
+* pnpm .npmrc expose dependency ([ce71968](https://github.com/powerfulyang/hooks/commit/ce719688dfed7a830993a9e7a79b7f609d13f32f))
+* swc didn't compile optional chaining usage in node_modules ([02892b5](https://github.com/powerfulyang/hooks/commit/02892b597b2a757e1eaa38858afbf487f671b4c2))
+
 ## [1.4.0](https://github.com/powerfulyang/hooks/compare/v1.3.0...v1.4.0) (2022-11-03)
 
 
