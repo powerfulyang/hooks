@@ -1,7 +1,9 @@
-import { produce } from 'immer';
-import { useCallback, useRef, useState } from 'react';
 import type { ReturnFunction, VoidFunction } from '@powerfulyang/utils';
 import { isFunction } from '@powerfulyang/utils';
+import { enableMapSet, produce } from 'immer';
+import { useCallback, useRef, useState } from 'react';
+
+enableMapSet();
 
 export function useImmer<T>(
   initialState: T | ReturnFunction<T>,

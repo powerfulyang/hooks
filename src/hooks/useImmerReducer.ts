@@ -1,7 +1,9 @@
 import type { Draft } from 'immer';
-import { produce } from 'immer';
+import { enableMapSet, produce } from 'immer';
 import type { Dispatch } from 'react';
 import { useMemo, useReducer } from 'react';
+
+enableMapSet();
 
 /**
  * @description Hook for creating a reducer with immer.

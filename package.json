@@ -5,14 +5,17 @@
   "keywords": [
     "react-hooks"
   ],
-  "publishConfig": {
-    "access": "public"
+  "homepage": "https://github.com/powerfulyang/hooks#readme",
+  "bugs": {
+    "url": "https://github.com/powerfulyang/hooks/issues"
   },
-  "author": "powerfulyang <i@powerfulyang.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerfulyang/hooks.git"
+  },
   "license": "MIT",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/es/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "author": "powerfulyang <i@powerfulyang.com>",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/es/index.mjs",
@@ -20,37 +23,33 @@
       "types": "./dist/types/index.d.ts"
     }
   },
-  "sideEffects": [
-    "dist/es/effect.mjs",
-    "dist/cjs/effect.cjs"
-  ],
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/es/index.mjs",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
-  "browserslist": [
-    "last 2 versions"
-  ],
-  "homepage": "https://github.com/powerfulyang/hooks#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/powerfulyang/hooks.git"
-  },
-  "bugs": {
-    "url": "https://github.com/powerfulyang/hooks/issues"
-  },
   "scripts": {
     "prebuild": "rimraf dist && node ./check.js",
     "build": "run-p build:*",
     "build:source": "rollup -c",
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
-    "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
     "lint:js": "eslint --ext .ts,.tsx ./src --fix",
-    "prepare": "husky install",
-    "tsc-check": "tsc --noEmit",
-    "test": "jest",
     "pre-commit": "lint-staged",
-    "prepublishOnly": "pnpm run build"
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm run build",
+    "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
+    "test": "jest",
+    "tsc-check": "tsc --noEmit"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@powerfulyang/utils": "1.10.0",
+    "immer": "10.0.1",
+    "rxjs": "7.8.0"
   },
   "devDependencies": {
     "@jest/globals": "29.5.0",
@@ -62,12 +61,10 @@
     "react": "18.2.0",
     "typescript": "5.0.4"
   },
-  "dependencies": {
-    "@powerfulyang/utils": "1.10.0",
-    "immer": "10.0.1",
-    "rxjs": "7.8.0"
-  },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
