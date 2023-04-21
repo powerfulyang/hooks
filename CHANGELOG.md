@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/powerfulyang/hooks/compare/v1.5.0...v1.5.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* immer side effects ([2a8ddc1](https://github.com/powerfulyang/hooks/commit/2a8ddc1ce62f71f502f241670aef5544142815d4))
+
 ## [1.5.0](https://github.com/powerfulyang/hooks/compare/v1.4.0...v1.5.0) (2023-04-20)
 
 
