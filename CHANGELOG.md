@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/powerfulyang/hooks/compare/v1.5.1...v1.5.2) (2023-04-21)
+
+
+### Bug Fixes
+
+* immer enableMapSet sideEffects ([4aca3f7](https://github.com/powerfulyang/hooks/commit/4aca3f7c17b09da6a2f8c4b9681ab627430da114))
+
 ## [1.5.1](https://github.com/powerfulyang/hooks/compare/v1.5.0...v1.5.1) (2023-04-21)
 
 
