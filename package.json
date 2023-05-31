@@ -47,13 +47,13 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "@powerfulyang/utils": "1.10.0",
+    "@powerfulyang/utils": "1.11.2",
     "immer": "10.0.1",
     "rxjs": "7.8.0"
   },
   "devDependencies": {
     "@jest/globals": "29.5.0",
-    "@powerfulyang/lint": "3.2.1",
+    "@powerfulyang/lint": "3.3.0",
     "@rollup/plugin-typescript": "11.1.0",
     "@testing-library/react": "14.0.0",
     "@types/node": "18.15.13",
