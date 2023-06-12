@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@powerfulyang/utils':
     specifier: 1.10.0
@@ -28,8 +32,8 @@ devDependencies:
     specifier: 18.15.13
     version: 18.15.13
   '@types/react':
-    specifier: 18.0.38
-    version: 18.0.38
+    specifier: 18.2.12
+    version: 18.2.12
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -1414,11 +1418,11 @@ packages:
   /@types/react-dom@18.0.10:
     resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
     dependencies:
-      '@types/react': 18.0.38
+      '@types/react': 18.2.12
     dev: true
 
-  /@types/react@18.0.38:
-    resolution: {integrity: sha512-ExsidLLSzYj4cvaQjGnQCk4HFfVT9+EZ9XZsQ8Hsrcn8QNgXtpZ3m9vSIC2MWtx7jHictK6wYhQgGh6ic58oOw==}
+  /@types/react@18.2.12:
+    resolution: {integrity: sha512-ndmBMLCgn38v3SntMeoJaIrO6tGHYKMEBohCUmw8HoLLQdRMOIGXfeYaBTLe2lsFaSB3MOK1VXscYFnmLtTSmw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
